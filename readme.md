@@ -101,31 +101,35 @@ int ft_str_is_uppercase(char *str);
 
 • It should return 1 if str is empty.
 
-Chapter IX
+
 Exercise 06 : ft_str_is_printable
-Exercise 06
-ft_str_is_printable
+
 Turn-in directory : ex06/
 Files to turn in : ft_str_is_printable.c
 Allowed functions : None
+
 • Create a function that returns 1 if the string given as a parameter contains only
 printable characters, and 0 if it contains any other character.
 • Here’s how it should be prototyped :
+
 int ft_str_is_printable(char *str);
+
 • It should return 1 if str is empty.
-12
-Chapter X
+
+
 Exercise 07 : ft_strupcase
-Exercise 07
-ft_strupcase
+
 Turn-in directory : ex07/
 Files to turn in : ft_strupcase.c
 Allowed functions : None
+
 • Create a function that transforms every letter to uppercase.
 • Here’s how it should be prototyped :
+
 char *ft_strupcase(char *str);
+
 • It should return str.
-13
+
 Chapter XI
 Exercise 08 : ft_strlowcase
 Exercise 08
