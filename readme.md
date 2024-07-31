@@ -26,32 +26,37 @@ Allowed functions : None
 
 • Reproduce the behavior of the function strcpy (man strcpy).
 • Here’s how it should be prototyped :
+
 char *ft_strcpy(char *dest, char *src);
 
 
 Exercise 01 : ft_strncpy
-Exercise 01
-ft_strncpy
+
 Turn-in directory : ex01/
 Files to turn in : ft_strncpy.c
 Allowed functions : None
+
 • Reproduce the behavior of the function strncpy (man strncpy).
 • Here’s how it should be prototyped :
+
 char *ft_strncpy(char *dest, char *src, unsigned int n);
-7
-Chapter V
+
+
 Exercise 02 : ft_str_is_alpha
-Exercise 02
-ft_str_is_alpha
+
 Turn-in directory : ex02/
 Files to turn in : ft_str_is_alpha.c
 Allowed functions : None
+
 • Create a function that returns 1 if the string given as a parameter contains only
 alphabetical characters, and 0 if it contains any other character.
 • Here’s how it should be prototyped :
+
 int ft_str_is_alpha(char *str);
+
 • It should return 1 if str is empty.
-8
+
+
 Chapter VI
 Exercise 03 : ft_str_is_numeric
 Exercise 03
