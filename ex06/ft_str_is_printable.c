@@ -6,7 +6,7 @@
 /*   By: deb <neaguolt@gmail.com>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 11:38:35 by deb               #+#    #+#             */
-/*   Updated: 2024/07/31 11:48:02 by deb              ###   ########.fr       */
+/*   Updated: 2024/08/01 12:29:11 by deb              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_str_is_printable(char *str)
 	}
 	return (0);
 }
-
+/*
 int	main(void)
 {
 	char	*str1;
@@ -48,4 +48,4 @@ int	main(void)
 	{
 		write(1, "Other String\n", 13);
 	}
-}
+} */

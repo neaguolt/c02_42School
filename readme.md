@@ -130,19 +130,21 @@ char *ft_strupcase(char *str);
 
 • It should return str.
 
-Chapter XI
+
 Exercise 08 : ft_strlowcase
-Exercise 08
-ft_strlowcase
+
 Turn-in directory : ex08/
 Files to turn in : ft_strlowcase.c
 Allowed functions : None
+
 • Create a function that transforms every letter to lowercase.
 • Here’s how it should be prototyped :
+
 char *ft_strlowcase(char *str);
+
 • It should return str.
-14
-Chapter XII
+
+
 Exercise 09 : ft_strcapitalize
 Exercise 09
 ft_strcapitalize

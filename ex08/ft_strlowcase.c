@@ -6,12 +6,12 @@
 /*   By: deb <neaguolt@gmail.com>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 16:03:20 by deb               #+#    #+#             */
-/*   Updated: 2024/07/31 16:14:47 by deb              ###   ########.fr       */
+/*   Updated: 2024/08/01 13:47:03 by deb              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <helper.h>
+//#include <helper.h>
 
 char	*ft_strlowcase(char *str);
 
@@ -38,7 +38,7 @@ char	*ft_strlowcase(char *str)
 	}
 	return (original);
 }
-
+/*
 int	main(void)
 {
 	char	str1[8];
@@ -47,4 +47,4 @@ int	main(void)
 	write(1, str1, 7);
 	ft_strlowcase(str1);
 	write(1, str1, 7);
-}
+} */

@@ -6,13 +6,13 @@
 /*   By: deb <neaguolt@gmail.com>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 08:46:34 by deb               #+#    #+#             */
-/*   Updated: 2024/07/30 12:20:24 by deb              ###   ########.fr       */
+/*   Updated: 2024/08/01 12:33:04 by deb              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "helper.h"
+/* #include "helper.h"
 
-/*
+
 strcpy()
 stpcpy()
 		These  functions  copy the string pointed to by src,
@@ -22,7 +22,7 @@ stpcpy()
 		For the difference between the two functions, see RETURN VALUE.
 		strcpy()
 			function return dst.
- */
+*/
 char	*ft_strcpy(char *dest, char *src);
 
 char	*ft_strcpy(char *dest, char *src)
@@ -38,7 +38,7 @@ char	*ft_strcpy(char *dest, char *src)
 	dest[it] = src[it];
 	return (dest);
 }
-
+/*
 int	main(void)
 {
 	char	*str1;
@@ -48,4 +48,4 @@ int	main(void)
 	ft_strcpy(str2, str1);
 	writestring(str2);
 	return (0);
-}
+} */

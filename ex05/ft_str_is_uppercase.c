@@ -6,7 +6,7 @@
 /*   By: deb <neaguolt@gmail.com>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 11:13:11 by deb               #+#    #+#             */
-/*   Updated: 2024/07/31 11:16:56 by deb              ###   ########.fr       */
+/*   Updated: 2024/08/01 12:28:57 by deb              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_str_is_uppercase(char *str)
 	}
 	return (0);
 }
-
+/*
 int	main(void)
 {
 	char	*str1;
@@ -53,4 +53,4 @@ int	main(void)
 	{
 		write(1, "Other String\n", 13);
 	}
-}
+} */

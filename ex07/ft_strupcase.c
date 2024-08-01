@@ -6,12 +6,12 @@
 /*   By: deb <neaguolt@gmail.com>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 11:50:18 by deb               #+#    #+#             */
-/*   Updated: 2024/07/31 16:01:17 by deb              ###   ########.fr       */
+/*   Updated: 2024/08/01 15:02:38 by deb              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "helper.h"
+#include "../helper/helper.h"
 
 char	*ft_strupcase(char *str);
 
