@@ -6,7 +6,7 @@
 /*   By: deb <neaguolt@gmail.com>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/01 15:20:09 by deb               #+#    #+#             */
-/*   Updated: 2024/08/01 16:49:00 by deb              ###   ########.fr       */
+/*   Updated: 2024/08/01 17:00:43 by deb              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 //#include <helper.h>
 
 //functions declarations
-int		islower_alpha(char c);
-
-int		isupper_alpha(char c);
 
 int		is_alpha(char c);
 
@@ -30,19 +27,14 @@ char	*ft_strcapitalize(char *str);
 
 //functions implementations
 
-int	islower_alpha(char c)
-{
-	return ((c > 96) && (c < 123));
-}
-
-int	isupper_alpha(char c)
-{
-	return ((c > 64) && (c < 91));
-}
-
 int	is_alpha(char c)
 {
-	return (islower_alpha(c) || isupper_alpha (c));
+	unsigned char	islower_alpha;
+	unsigned char	isupper_alpha;
+
+	islower_alpha = (c > 96) && (c < 123);
+	isupper_alpha = (c > 64) && (c < 91);
+	return (islower_alpha || isupper_alpha);
 }
 
 int	is_delimiter(char c)
@@ -60,13 +52,19 @@ int	is_delimiter(char c)
 
 void	upper_char(char *c)
 {
-	if (islower_alpha(*c))
+	unsigned char	islower_alpha;
+
+	islower_alpha = (*c > 96) && (*c < 123);
+	if (islower_alpha)
 		*c = *c - 32;
 }
 
 void	lower_char(char *c)
 {
-	if (isupper_alpha(*c))
+	unsigned char	isupper_alpha;
+
+	isupper_alpha = (*c > 64) && (*c < 91);
+	if (isupper_alpha)
 		*c = *c + 32;
 }
 
@@ -102,7 +100,8 @@ int	main(void)
 {
 	char	str1[64];
 
-	initialize_str(str1, "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un\n");
+	initialize_str(str1, "salut, comment tu vas
+	? 42mots quarante-deux; cinquante+et+un\n");
 	write(1, str1, 63);
 	write(1, ft_strcapitalize(str1), 63);
 	return (0);
