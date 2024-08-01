@@ -5,83 +5,94 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: deb <neaguolt@gmail.com>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/31 17:17:10 by deb               #+#    #+#             */
-/*   Updated: 2024/08/01 15:16:04 by deb              ###   ########.fr       */
+/*   Created: 2024/08/01 15:20:09 by deb               #+#    #+#             */
+/*   Updated: 2024/08/01 16:49:00 by deb              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+//#include <helper.h>
+
+//functions declarations
+int		islower_alpha(char c);
+
+int		isupper_alpha(char c);
+
+int		is_alpha(char c);
+
+int		is_delimiter(char c);
+
+void	upper_char(char *c);
+
+void	lower_char(char *c);
 
 char	*ft_strcapitalize(char *str);
 
-int		is_upper(char c);
+//functions implementations
 
-int		is_lower(char c);
-
-int		is_delimitator(char c);
-
-int	is_upper(char c)
+int	islower_alpha(char c)
 {
-	if ((c > 64) && (c < 91))
-		return (1);
-	return (0);
+	return ((c > 96) && (c < 123));
 }
 
-int	is_lower(char c)
+int	isupper_alpha(char c)
 {
-	if ((c > 96) && (c < 123))
-		return (1);
-	return (0);
+	return ((c > 64) && (c < 91));
 }
 
-void initialize_str(char *str, const char *initial)
+int	is_alpha(char c)
 {
-	while (*initial != '\0')
-	{
-		*str = *initial;
-		str++;
-		initial++;
-	}
-	*str = '\0';  // Null terminator
+	return (islower_alpha(c) || isupper_alpha (c));
 }
 
-int	is_delimitator(char c)
+int	is_delimiter(char c)
 {
-	char	separator[12];
+	char	*delimiters;
 	int		it;
 
+	delimiters = ",. ?!;+-";
 	it = 0;
-	initialize_str(separator, ",;:! \"?-+.");
-	while (separator[it] != '\0')
-		if (c == separator[it++])
+	while (delimiters[it] != '\0')
+		if (c == delimiters[it++])
 			return (1);
 	return (0);
 }
 
+void	upper_char(char *c)
+{
+	if (islower_alpha(*c))
+		*c = *c - 32;
+}
+
+void	lower_char(char *c)
+{
+	if (isupper_alpha(*c))
+		*c = *c + 32;
+}
+
 char	*ft_strcapitalize(char *str)
 {
+	int		begin_word;
 	char	*original;
-	int		word;
 
+	begin_word = 1;
 	original = str;
-	word = 0;
 	while (*str != '\0')
 	{
-		if (!word && is_lower(*str))
+		if (is_alpha(*str))
 		{
-			*str = *str - 32;
-			word = 1;
+			if (begin_word)
+			{
+				upper_char(str);
+				begin_word = 0;
+			}
+			else
+				lower_char(str);
 		}
-		else if (word && is_upper(*str))
-		{
-			*str = *str + 32;
-		}
-		else if (is_delimitator(*str))
-		{
-			word = 0;
-		}
+		else if (is_delimiter(*str))
+			begin_word = 1;
 		else
-			word = 1;
+			begin_word = 0;
 		str++;
 	}
 	return (original);
@@ -91,8 +102,7 @@ int	main(void)
 {
 	char	str1[64];
 
-	initialize_str(str1, "salut, comment tu vas ?
-	42mots quarante-deux; cinquante+et+un\n");
+	initialize_str(str1, "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un\n");
 	write(1, str1, 63);
 	write(1, ft_strcapitalize(str1), 63);
 	return (0);
