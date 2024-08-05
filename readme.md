@@ -192,25 +192,29 @@ Coucou\ntu vas bien ?
 Coucou\0atu vas bien ?
 • Here’s how it should be prototyped :
 void ft_putstr_non_printable(char *str);
-17
-Chapter XV
+
+
 Exercise 12 : ft_print_memory
-Exercise 12
-ft_print_memory
+
 Turn-in directory : ex12/
 Files to turn in : ft_print_memory.c
 Allowed functions : write
+
 • Create a function that displays the memory area onscreen.
 • The display of this memory area should be split into three "columns" separated by
 a space:
- The hexadecimal address of the first line’s first character followed by a ’:’.
- The content in hexadecimal with a space each 2 characters and should be
+
+  The hexadecimal address of the first line’s first character followed by a ’:’.
+
+  The content in hexadecimal with a space each 2 characters and should be
 padded with spaces if needed (see the example below).
- The content in printable characters.
+
+  The content in printable characters.
+
 • If a character is non-printable, it’ll be replaced by a dot.
 • Each line should handle sixteen characters.
 • If size is equal to 0, nothing should be displayed.
-18
+
 C Piscine C 02
 • Example:
 $> ./ft_print_memory
@@ -228,9 +232,14 @@ $> ./ft_print_memory | cat -te
 0000000107ff9f80: 0a09 7072 696e 745f 6d65 6d6f 7279 0a0a ..print_memory..$
 0000000107ff9f90: 0a09 6c6f 6c2e 6c6f 6c0a 2000 ..lol.lol. .$
 $>
+
 • Here’s how it should be prototyped:
+
 void *ft_print_memory(void *addr, unsigned int size);
+
 • It should return addr.
+
+***END***
 ft_strcapitalize
 ("salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un")
 Expected
